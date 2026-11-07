@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hotel La Burna Panoràmic</title>
+  <meta name="description" content="Web oficial del Hotel La Burna Panoràmic. Habitaciones, servicios, ubicación, contacto y reservas.">
+  <link rel="canonical" href="https://laburnahotel.com/es/">
+
+  <!-- Versiones de idioma -->
+  <link rel="alternate" hreflang="ca" href="https://laburnahotel.com/">
+  <link rel="alternate" hreflang="es" href="https://laburnahotel.com/es/">
+  <link rel="alternate" hreflang="en" href="https://laburnahotel.com/en/">
+  <link rel="alternate" hreflang="fr" href="https://laburnahotel.com/fr/">
+  <link rel="alternate" hreflang="x-default" href="https://laburnahotel.com/">
+
+  <!-- Open Graph (añadir og:image cuando haya fotografías reales) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hotel La Burna Panoràmic">
+  <meta property="og:description" content="Web oficial del Hotel La Burna Panoràmic.">
+  <meta property="og:url" content="https://laburnahotel.com/es/">
+  <meta property="og:locale" content="es_ES">
+
+  <link rel="stylesheet" href="../css/styles.css?v=1">
+  <script src="../js/main.js?v=1" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="header__logo" href="/es/">Hotel La Burna Panoràmic</a>
+
+      <button class="header__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir el menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="menu" aria-label="Menú principal">
+        <ul class="nav__list">
+          <li><a href="#habitaciones">Habitaciones</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a class="nav__cta" href="#reservas">Reservar</a></li>
+        </ul>
+
+        <ul class="lang" aria-label="Idioma">
+          <li><a href="/" hreflang="ca" lang="ca">CA</a></li>
+          <li><a href="/es/" hreflang="es" lang="es" aria-current="page">ES</a></li>
+          <li><a href="/en/" hreflang="en" lang="en">EN</a></li>
+          <li><a href="/fr/" hreflang="fr" lang="fr">FR</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- Portada: añadir aquí la fotografía principal (assets/img/) -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero__title">Hotel La Burna Panoràmic</h1>
+        <p class="hero__text">Próximamente, toda la información del hotel.</p>
+        <a class="button" href="#reservas">Reservar</a>
+      </div>
+    </section>
+
+    <section class="section" id="habitaciones" aria-labelledby="habitaciones-title">
+      <div class="container">
+        <h2 id="habitaciones-title">Habitaciones</h2>
+        <!-- Un <article class="card"> por habitación: foto, nombre, descripción y botón de reserva -->
+        <div class="grid" data-placeholder>
+          <p class="placeholder">Próximamente.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="servicios" aria-labelledby="servicios-title">
+      <div class="container">
+        <h2 id="servicios-title">Servicios</h2>
+        <!-- Lista de servicios reales del hotel -->
+        <ul class="grid" data-placeholder>
+          <li class="placeholder">Próximamente.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="galeria" aria-labelledby="galeria-title">
+      <div class="container">
+        <h2 id="galeria-title">Galería</h2>
+        <!-- Fotografías reales del hotel (assets/img/), con texto alternativo -->
+        <div class="gallery" data-placeholder>
+          <p class="placeholder">Próximamente.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="ubicacion" aria-labelledby="ubicacion-title">
+      <div class="container">
+        <h2 id="ubicacion-title">Ubicación</h2>
+        <!-- Dirección, cómo llegar y mapa -->
+        <div class="map" data-placeholder>
+          <p class="placeholder">Próximamente.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reservas" aria-labelledby="reservas-title">
+      <div class="container">
+        <h2 id="reservas-title">Reservas</h2>
+        <!-- Motor de reservas: insertar aquí el código o el enlace del proveedor -->
+        <div class="booking" id="motor-reserves" data-placeholder>
+          <p class="placeholder">Próximamente.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="contacto" aria-labelledby="contacto-title">
+      <div class="container">
+        <h2 id="contacto-title">Contacto</h2>
+        <!-- Teléfono, correo (Wepanel) y dirección reales -->
+        <address class="contact" data-placeholder>
+          <p class="placeholder">Próximamente.</p>
+        </address>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span data-year></span> Hotel La Burna Panoràmic</p>
+      <!-- Enlaces legales: aviso legal, privacidad y cookies -->
+    </div>
+  </footer>
+</body>
+</html>

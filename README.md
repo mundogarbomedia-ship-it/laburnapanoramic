@@ -7,26 +7,53 @@ Web estática (HTML, CSS y JavaScript, sin frameworks) de **laburnahotel.com**.
 
 ## Idiomas
 
-| Idioma | Ruta | Estado |
-|---|---|---|
-| Catalán (principal, `x-default`) | `/` | Estructura inicial |
-| Español | `/es/` | Pendiente |
-| Inglés | `/en/` | Pendiente |
-| Francés | `/fr/` | Pendiente |
+| Idioma | Archivo | URL | `lang` | `og:locale` |
+|---|---|---|---|---|
+| Catalán (principal, `x-default`) | `index.html` | `/` | `ca` | `ca_ES` |
+| Español | `es/index.html` | `/es/` | `es` | `es_ES` |
+| Inglés | `en/index.html` | `/en/` | `en` | `en_GB` |
+| Francés | `fr/index.html` | `/fr/` | `fr` | `fr_FR` |
+
+- Cada página tiene su `canonical` y las cinco etiquetas `hreflang` (ca, es, en, fr y `x-default` → catalán). Si se añade una página nueva, debe llevar las mismas en sus cuatro versiones.
+- El selector de idioma (`.lang`) está en las cuatro páginas, con rutas absolutas (`/`, `/es/`, `/en/`, `/fr/`) y `aria-current="page"` en el idioma actual.
+- Las cuatro versiones comparten `css/styles.css` y `js/main.js`. Desde las subcarpetas se cargan con `../css/` y `../js/`.
+- Los anclajes de las secciones van traducidos:
+
+  | Sección | CA | ES | EN | FR |
+  |---|---|---|---|---|
+  | Habitaciones | `#habitacions` | `#habitaciones` | `#rooms` | `#chambres` |
+  | Servicios | `#serveis` | `#servicios` | `#services` | `#services` |
+  | Galería | `#galeria` | `#galeria` | `#gallery` | `#galerie` |
+  | Ubicación | `#ubicacio` | `#ubicacion` | `#location` | `#situation` |
+  | Reservas | `#reserves` | `#reservas` | `#booking` | `#reservation` |
+  | Contacto | `#contacte` | `#contacto` | `#contact` | `#contact` |
 
 ## Estructura
 
 ```text
-index.html        Portada (catalán)
-css/styles.css    Estilos
-js/main.js        Menú móvil y utilidades
+index.html        Portada en catalán
+es/index.html     Portada en español
+en/index.html     Portada en inglés
+fr/index.html     Portada en francés
+css/styles.css    Estilos comunes
+js/main.js        Menú móvil y utilidades comunes
 assets/img/       Fotografías del hotel
 ```
 
 ## Secciones preparadas
 
-Habitaciones, servicios, galería, ubicación, reservas (motor de reservas en `#motor-reserves`) y contacto. Todas muestran «Properament» hasta tener la información real del hotel: no se inventan tarifas, fotografías ni servicios.
+Habitaciones, servicios, galería, ubicación, reservas y contacto. El motor de reservas irá en el bloque `#motor-reserves`, que tiene el mismo id en los cuatro idiomas. Todas las secciones muestran «Properament / Próximamente / Coming soon / Prochainement» hasta tener la información real del hotel: no se inventan tarifas, fotografías ni servicios.
+
+## Probar en local
+
+Las rutas del selector de idioma son absolutas, así que hay que usar un servidor local con la raíz en esta carpeta (abriendo el archivo con doble clic no funcionan). Por ejemplo, la extensión **Live Server** de VS Code («Go Live») o, si está instalado Python:
+
+```bash
+python -m http.server 8000
+```
+
+y abrir http://localhost:8000/
 
 ## Convenciones
 
-- Si cambias un CSS o un JS, sube su `?v=` en los HTML que lo cargan.
+- Si cambias un CSS o un JS, sube su `?v=` en los cuatro HTML que lo cargan.
