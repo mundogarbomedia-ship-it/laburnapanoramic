@@ -1,0 +1,287 @@
+/* Hotel La Burna Panoràmic – estils base */
+
+:root {
+  --color-bg: #ffffff;
+  --color-bg-alt: #f4f2ee;
+  --color-text: #1f2328;
+  --color-muted: #5f6670;
+  --color-primary: #2f4f4f;
+  --color-primary-dark: #1f3535;
+  --color-border: #e2ded6;
+
+  --font-base: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --radius: 8px;
+  --container: 1200px;
+  --header-h: 64px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-base);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin: 0 0 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  padding: 8px 16px;
+  background: var(--color-primary);
+  color: #fff;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 16px;
+}
+
+/* Cabecera */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--header-h);
+  gap: 16px;
+}
+
+.header__logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.header__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.header__toggle span {
+  display: block;
+  height: 2px;
+  background: var(--color-text);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav__list,
+.lang {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__list a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.nav__list a:hover {
+  color: var(--color-primary);
+}
+
+.nav__cta {
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  background: var(--color-primary);
+  color: #fff !important;
+}
+
+.lang {
+  gap: 8px;
+  font-size: 0.875rem;
+}
+
+.lang a {
+  text-decoration: none;
+  color: var(--color-muted);
+}
+
+.lang a[aria-current="page"] {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+/* Portada */
+.hero {
+  padding: 96px 0;
+  background: var(--color-bg-alt);
+  text-align: center;
+}
+
+.hero__title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.hero__text {
+  color: var(--color-muted);
+  margin: 0 0 24px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: var(--radius);
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.button:hover {
+  background: var(--color-primary-dark);
+}
+
+/* Secciones */
+.section {
+  padding: 64px 0;
+}
+
+.section--alt {
+  background: var(--color-bg-alt);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.contact {
+  font-style: normal;
+}
+
+.placeholder {
+  color: var(--color-muted);
+  margin: 0;
+}
+
+/* Pie */
+.footer {
+  padding: 32px 0;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+
+.footer__inner p {
+  margin: 0;
+}
+
+/* Móvil */
+@media (max-width: 860px) {
+  .header__toggle {
+    display: flex;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 16px;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .nav.is-open {
+    display: flex;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+  }
+
+  .nav__list a {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .nav__cta {
+    text-align: center;
+  }
+
+  .hero {
+    padding: 64px 0;
+  }
+
+  .section {
+    padding: 48px 0;
+  }
+}

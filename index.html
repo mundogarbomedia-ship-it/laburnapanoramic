@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hotel La Burna Panoràmic</title>
+  <meta name="description" content="Web oficial de l'Hotel La Burna Panoràmic. Habitacions, serveis, ubicació, contacte i reserves.">
+  <link rel="canonical" href="https://laburnahotel.com/">
+
+  <!-- Versions d'idioma (pendents de crear: /es/, /en/, /fr/) -->
+  <link rel="alternate" hreflang="ca" href="https://laburnahotel.com/">
+  <link rel="alternate" hreflang="es" href="https://laburnahotel.com/es/">
+  <link rel="alternate" hreflang="en" href="https://laburnahotel.com/en/">
+  <link rel="alternate" hreflang="fr" href="https://laburnahotel.com/fr/">
+  <link rel="alternate" hreflang="x-default" href="https://laburnahotel.com/">
+
+  <!-- Open Graph (afegir og:image quan hi hagi fotografies reals) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hotel La Burna Panoràmic">
+  <meta property="og:description" content="Web oficial de l'Hotel La Burna Panoràmic.">
+  <meta property="og:url" content="https://laburnahotel.com/">
+  <meta property="og:locale" content="ca_ES">
+
+  <link rel="stylesheet" href="css/styles.css?v=1">
+  <script src="js/main.js?v=1" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contingut">Salta al contingut</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="header__logo" href="/">Hotel La Burna Panoràmic</a>
+
+      <button class="header__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Obre el menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="menu" aria-label="Menú principal">
+        <ul class="nav__list">
+          <li><a href="#habitacions">Habitacions</a></li>
+          <li><a href="#serveis">Serveis</a></li>
+          <li><a href="#ubicacio">Ubicació</a></li>
+          <li><a href="#contacte">Contacte</a></li>
+          <li><a class="nav__cta" href="#reserves">Reserva</a></li>
+        </ul>
+
+        <ul class="lang" aria-label="Idioma">
+          <li><a href="/" hreflang="ca" lang="ca" aria-current="page">CA</a></li>
+          <li><a href="/es/" hreflang="es" lang="es">ES</a></li>
+          <li><a href="/en/" hreflang="en" lang="en">EN</a></li>
+          <li><a href="/fr/" hreflang="fr" lang="fr">FR</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contingut">
+    <!-- Portada: afegir aquí la fotografia principal (assets/img/) -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero__title">Hotel La Burna Panoràmic</h1>
+        <p class="hero__text">Properament, tota la informació de l'hotel.</p>
+        <a class="button" href="#reserves">Reserva</a>
+      </div>
+    </section>
+
+    <section class="section" id="habitacions" aria-labelledby="habitacions-title">
+      <div class="container">
+        <h2 id="habitacions-title">Habitacions</h2>
+        <!-- Una <article class="card"> per habitació: foto, nom, descripció i botó de reserva -->
+        <div class="grid" data-placeholder>
+          <p class="placeholder">Properament.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="serveis" aria-labelledby="serveis-title">
+      <div class="container">
+        <h2 id="serveis-title">Serveis</h2>
+        <!-- Llista de serveis reals de l'hotel -->
+        <ul class="grid" data-placeholder>
+          <li class="placeholder">Properament.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="galeria" aria-labelledby="galeria-title">
+      <div class="container">
+        <h2 id="galeria-title">Galeria</h2>
+        <!-- Fotografies reals de l'hotel (assets/img/), amb text alternatiu -->
+        <div class="gallery" data-placeholder>
+          <p class="placeholder">Properament.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="ubicacio" aria-labelledby="ubicacio-title">
+      <div class="container">
+        <h2 id="ubicacio-title">Ubicació</h2>
+        <!-- Adreça, com arribar i mapa -->
+        <div class="map" data-placeholder>
+          <p class="placeholder">Properament.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reserves" aria-labelledby="reserves-title">
+      <div class="container">
+        <h2 id="reserves-title">Reserves</h2>
+        <!-- Motor de reserves: inserir aquí el codi o l'enllaç del proveïdor -->
+        <div class="booking" id="motor-reserves" data-placeholder>
+          <p class="placeholder">Properament.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="contacte" aria-labelledby="contacte-title">
+      <div class="container">
+        <h2 id="contacte-title">Contacte</h2>
+        <!-- Telèfon, correu (Wepanel) i adreça reals -->
+        <address class="contact" data-placeholder>
+          <p class="placeholder">Properament.</p>
+        </address>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span data-year></span> Hotel La Burna Panoràmic</p>
+      <!-- Enllaços legals: avís legal, privacitat i galetes -->
+    </div>
+  </footer>
+</body>
+</html>
