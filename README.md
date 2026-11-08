@@ -22,6 +22,7 @@ Web estática (HTML, CSS y JavaScript, sin frameworks) de **laburnahotel.com**.
   | Sección | CA | ES | EN | FR |
   |---|---|---|---|---|
   | Habitaciones | `#habitacions` | `#habitaciones` | `#rooms` | `#chambres` |
+  | Vistas | `#vistes` | `#vistas` | `#views` | `#vues` |
   | Servicios | `#serveis` | `#servicios` | `#services` | `#services` |
   | Galería | `#galeria` | `#galeria` | `#gallery` | `#galerie` |
   | Ubicación | `#ubicacio` | `#ubicacion` | `#location` | `#situation` |
@@ -32,12 +33,15 @@ Web estática (HTML, CSS y JavaScript, sin frameworks) de **laburnahotel.com**.
 
 ```text
 index.html        Portada en catalán
+avis-legal.html   Aviso legal, privacidad y cookies (solo CA por ahora)
+favicon.ico, apple-touch-icon.png   Iconos (sacados del logo)
 es/index.html     Portada en español
 en/index.html     Portada en inglés
 fr/index.html     Portada en francés
 css/styles.css    Estilos comunes
 js/main.js        Menú móvil y utilidades comunes
-assets/img/       Fotografías del hotel
+assets/img/       Fotografías del hotel (WebP) e iconos
+assets/video/     Vídeo del hero (720p ordenador, 540p móvil)
 ```
 
 ## Secciones preparadas
@@ -57,3 +61,10 @@ y abrir http://localhost:8000/
 ## Convenciones
 
 - Si cambias un CSS o un JS, sube su `?v=` en los cuatro HTML que lo cargan.
+
+## Notas de la portada (CA)
+
+- Reservas justo después del hero, como en Valle del Reposo: widget de Octorate en `#motor-reserves` y botones por habitación (`room=346972` doble, `room=347176` triple), con `lang=CA`.
+- El mapa de Google solo se carga si el usuario pulsa «Mostra el mapa» (por las cookies).
+- No hay jardín ni terraza: cada habitación tiene su propio balcón.
+- ES/EN/FR no se traducen hasta tener la versión catalana definitiva.

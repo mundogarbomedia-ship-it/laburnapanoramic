@@ -265,3 +265,41 @@ p { margin: 0 0 1em; max-width: 64ch; }
   .hero { min-height: 88vh; }
   .hero::after { background: linear-gradient(180deg, rgba(20,28,34,.25) 0%, rgba(20,28,34,.15) 35%, rgba(20,28,34,.8) 75%, rgba(20,28,34,.88) 100%); }
 }
+
+/* ---------- les vistes: panoràmica arrossegable + balcons ---------- */
+.pano { margin: 2.25rem 0 0; }
+.pano__track {
+  overflow-x: auto; overflow-y: hidden;
+  cursor: grab; scrollbar-width: thin; scrollbar-color: var(--pedra) transparent;
+  -webkit-overflow-scrolling: touch;
+}
+.pano__track.is-dragging { cursor: grabbing; }
+.pano__track img { height: clamp(260px, 42vw, 520px); width: auto; max-width: none; user-select: none; -webkit-user-drag: none; }
+.pano figcaption { font-size: .9rem; color: var(--text-suau); margin-top: .7rem; }
+.views { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(.75rem, 2vw, 1.5rem); margin-top: clamp(2rem, 4vw, 3rem); }
+.views figure { margin: 0; }
+.views img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radi); }
+.views figcaption { font-size: .9rem; color: var(--text-suau); margin-top: .5rem; }
+@media (max-width: 700px) {
+  .views { grid-template-columns: 1fr 1fr; }
+  .views figure:first-child { grid-column: 1 / -1; }
+  .views figure:first-child img { aspect-ratio: 4 / 3; }
+}
+
+/* ---------- peu: enllaços legals ---------- */
+.footer__legal { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; }
+.footer__legal a { color: #c4ced3; }
+.footer__legal a:hover { color: #fff; }
+
+/* ---------- pàgina legal ---------- */
+.legal { max-width: 72ch; }
+.legal h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); }
+.legal h2 { font-size: 1.7rem; margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--linia); }
+.legal h3 { font-size: 1.2rem; margin-top: 1.5rem; }
+.legal table { width: 100%; border-collapse: collapse; font-size: .95rem; margin: 1rem 0 1.5rem; }
+.legal th, .legal td { text-align: left; vertical-align: top; padding: .55rem .6rem; border-bottom: 1px solid var(--linia); }
+.legal th { font-weight: 600; background: var(--boira); }
+.legal .updated { color: var(--text-suau); font-size: .95rem; }
+.map { display: grid; }
+.map__consent { place-self: center; text-align: center; padding: 2rem 1.5rem; }
+.map__consent p { margin: 1rem auto 0; font-size: .92rem; color: var(--text-suau); max-width: 36ch; }

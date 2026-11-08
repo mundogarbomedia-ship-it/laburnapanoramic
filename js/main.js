@@ -33,6 +33,40 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+
+  // Panoràmica: arrossegar amb el ratolí (al mòbil ja es llisca amb el dit)
+  document.querySelectorAll('[data-pano] .pano__track').forEach((track) => {
+    let startX = 0; let startScroll = 0; let down = false;
+    const img = track.querySelector('img');
+    const center = () => { track.scrollLeft = 0; };
+    if (img && img.complete) center(); else if (img) img.addEventListener('load', center, { once: true });
+    track.addEventListener('pointerdown', (e) => {
+      if (e.pointerType !== 'mouse') return;
+      down = true; startX = e.clientX; startScroll = track.scrollLeft;
+      track.classList.add('is-dragging'); track.setPointerCapture(e.pointerId);
+    });
+    track.addEventListener('pointermove', (e) => { if (down) track.scrollLeft = startScroll - (e.clientX - startX); });
+    const stop = () => { down = false; track.classList.remove('is-dragging'); };
+    track.addEventListener('pointerup', stop);
+    track.addEventListener('pointercancel', stop);
+  });
+
+
+  // Mapa: es carrega només si l'usuari el demana (Google Maps instal·la galetes)
+  document.querySelectorAll('[data-map-src]').forEach((box) => {
+    const btn = box.querySelector('[data-map-load]');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      const frame = document.createElement('iframe');
+      frame.src = box.dataset.mapSrc;
+      frame.title = box.dataset.mapTitle || 'Mapa';
+      frame.loading = 'lazy';
+      frame.referrerPolicy = 'no-referrer-when-downgrade';
+      box.replaceChildren(frame);
+      frame.focus();
+    });
+  });
+
   // Galeria amb visor (teclat: fletxes i Esc)
   const gallery = document.querySelector('[data-gallery]');
   const box = document.querySelector('.lightbox');
