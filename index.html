@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hotel La Burna Panoràmic</title>
-  <meta name="description" content="Web oficial de l'Hotel La Burna Panoràmic. Habitacions, serveis, ubicació, contacte i reserves.">
+  <title>Hotel La Burna Panoràmic · Hotel familiar a Sispony, Andorra</title>
+  <meta name="description" content="Hotel familiar a Sispony (La Massana, Andorra). Habitacions dobles i triples, totes amb balcó i vistes a la muntanya. Aparcament gratuït i pistes de Vallnord a 1 km. Reserva directa.">
   <link rel="canonical" href="https://laburnahotel.com/">
 
   <!-- Versions d'idioma -->
@@ -14,22 +14,49 @@
   <link rel="alternate" hreflang="fr" href="https://laburnahotel.com/fr/">
   <link rel="alternate" hreflang="x-default" href="https://laburnahotel.com/">
 
-  <!-- Open Graph (afegir og:image quan hi hagi fotografies reals) -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Hotel La Burna Panoràmic">
-  <meta property="og:description" content="Web oficial de l'Hotel La Burna Panoràmic.">
+  <meta property="og:description" content="Hotel familiar a Sispony, Andorra. Totes les habitacions amb balcó i vistes a la muntanya.">
   <meta property="og:url" content="https://laburnahotel.com/">
   <meta property="og:locale" content="ca_ES">
+  <meta property="og:image" content="https://laburnahotel.com/assets/img/hero-hivern-1280.webp">
 
-  <link rel="stylesheet" href="css/styles.css?v=1">
-  <script src="js/main.js?v=1" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=2">
+  <link rel="preload" as="image" href="assets/img/hero-hivern-1920.webp" media="(min-width: 700px)">
+  <script src="js/main.js?v=2" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "Hotel La Burna Panoràmic",
+    "url": "https://laburnahotel.com/",
+    "telephone": "+376 835 355",
+    "email": "info@hotellaburna.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. del Jovell, 20",
+      "addressLocality": "Sispony, La Massana",
+      "postalCode": "AD400",
+      "addressCountry": "AD"
+    },
+    "petsAllowed": true,
+    "sameAs": ["https://www.instagram.com/panoramiclaburna"]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#contingut">Salta al contingut</a>
 
   <header class="header">
     <div class="container header__inner">
-      <a class="header__logo" href="/">Hotel La Burna Panoràmic</a>
+      <a class="header__logo" href="/" aria-label="Hotel La Burna Panoràmic, inici">
+        <strong>La Burna</strong>
+        <span>HOTEL PANORÀMIC</span>
+      </a>
 
       <button class="header__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Obre el menú">
         <span></span><span></span><span></span>
@@ -39,6 +66,7 @@
         <ul class="nav__list">
           <li><a href="#habitacions">Habitacions</a></li>
           <li><a href="#serveis">Serveis</a></li>
+          <li><a href="#galeria">Galeria</a></li>
           <li><a href="#ubicacio">Ubicació</a></li>
           <li><a href="#contacte">Contacte</a></li>
           <li><a class="nav__cta" href="#reserves">Reserva</a></li>
@@ -55,61 +83,214 @@
   </header>
 
   <main id="contingut">
-    <!-- Portada: afegir aquí la fotografia principal (assets/img/) -->
-    <section class="hero">
+    <!-- Hero amb vídeo. La foto és la imatge de reserva (mòbil, dades estalviades o «reduir moviment").
+         Per canviar el vídeo: assets/video/hero-720.mp4 (ordinador) i hero-540.mp4 (mòbil). -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__media">
+        <picture>
+          <source media="(max-width: 699px)" srcset="assets/img/hero-hivern-mobil-900.webp">
+          <img src="assets/img/hero-hivern-1920.webp" srcset="assets/img/hero-hivern-1280.webp 1280w, assets/img/hero-hivern-1920.webp 1920w" sizes="100vw" alt="L'Hotel La Burna a Sispony, amb el pic nevat al fons" fetchpriority="high">
+        </picture>
+        <video muted loop playsinline preload="none" aria-hidden="true"
+               data-src-large="assets/video/hero-720.mp4" data-src-small="assets/video/hero-540.mp4"></video>
+      </div>
       <div class="container">
-        <h1 class="hero__title">Hotel La Burna Panoràmic</h1>
-        <p class="hero__text">Properament, tota la informació de l'hotel.</p>
-        <a class="button" href="#reserves">Reserva</a>
+        <h1 class="hero__title" id="hero-title">Un balcó obert al Pirineu</h1>
+        <p class="hero__text">Hotel familiar a Sispony, a la parròquia de La Massana. Totes les habitacions tenen balcó i vistes a la muntanya.</p>
+        <div class="hero__actions">
+          <a class="button button--light" href="#reserves">Consulta disponibilitat</a>
+          <a class="button button--ghost" href="#habitacions">Veure habitacions</a>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="habitacions" aria-labelledby="habitacions-title">
+    <!-- Reserves just després del hero, com a la web de Valle del Reposo -->
+    <section class="booking-band" id="reserves" aria-labelledby="reserves-title">
+      <div class="container">
+        <div class="booking-band__head">
+          <div>
+            <h2 id="reserves-title">Consulta dates i preus</h2>
+            <p>Tria les dates i reserva directament amb l'hotel.</p>
+          </div>
+        </div>
+        <div class="booking" id="motor-reserves">
+          <!-- Motor de reserves Octorate (propietat 336370) -->
+          <script type="text/javascript" src="https://resx.octorate.com/octobook/resources/widget/js/form.js" data-sitekey="octosite336370"></script>
+        </div>
+        <p class="booking__fallback">No veus el cercador? <a href="https://book.octorate.com/octobook/site/reservation/calendar.xhtml?codice=336370" target="_blank" rel="noopener">Obre el motor de reserves</a></p>
+      </div>
+    </section>
+
+    <section class="section" id="hotel" aria-labelledby="hotel-title">
+      <div class="container intro">
+        <div class="intro__photo">
+          <img src="assets/img/hotel-vall-1400.webp" srcset="assets/img/hotel-vall-800.webp 800w, assets/img/hotel-vall-1400.webp 1400w" sizes="(max-width: 860px) 100vw, 55vw" alt="L'hotel enmig dels avets, amb la vall de La Massana a la dreta" loading="lazy" width="1400" height="788">
+        </div>
+        <div>
+          <h2 id="hotel-title">Un hotel familiar, amb vistes</h2>
+          <p class="lead">A La Burna et despertes amb la vall de La Massana davant del balcó. Un hotel senzill i acollidor, a tocar de les pistes de Vallnord.</p>
+          <ul class="intro__facts">
+            <li>Habitacions dobles i triples, totes amb balcó</li>
+            <li>Aparcament gratuït davant de l'hotel</li>
+            <li>Pistes de Vallnord a 1 km, amb bus llançadora</li>
+            <li>Mascotes benvingudes, amb avís previ</li>
+          </ul>
+          <a class="button button--ghost" href="#habitacions">Coneix les habitacions</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="habitacions" aria-labelledby="habitacions-title">
       <div class="container">
         <h2 id="habitacions-title">Habitacions</h2>
-        <!-- Una <article class="card"> per habitació: foto, nom, descripció i botó de reserva -->
-        <div class="grid" data-placeholder>
-          <p class="placeholder">Properament.</p>
+        <p class="lead">Dues opcions i la mateixa vista: totes les habitacions tenen bany privat i balcó amb vistes a les muntanyes.</p>
+
+        <div class="rooms">
+          <article class="card">
+            <img src="assets/img/doble-1200.webp" srcset="assets/img/doble-700.webp 700w, assets/img/doble-1200.webp 1200w" sizes="(max-width: 900px) 100vw, 50vw" alt="Habitació doble amb dos llits junts i la finestra oberta a la muntanya" loading="lazy" width="1200" height="900">
+            <div class="card__body">
+              <h3>Habitació doble</h3>
+              <p class="card__meta">Dos llits junts o un llit gran, segons disponibilitat</p>
+              <ul class="features">
+                <li>Balcó amb vistes</li>
+                <li>Bany privat amb banyera</li>
+                <li>Calefacció</li>
+                <li>Televisió</li>
+              </ul>
+              <details>
+                <summary>Més informació</summary>
+                <p>Per a parelles o dues persones. Segons la disponibilitat, la preparem amb un llit gran o amb dos llits junts. Bressol disponible.</p>
+              </details>
+              <div class="card__actions">
+                <a class="button" href="https://book.octorate.com/octobook/site/reservation/calendar.xhtml?codice=336370&amp;room=346972" target="_blank" rel="noopener">Reserva la doble</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="assets/img/triple-1200.webp" srcset="assets/img/triple-700.webp 700w, assets/img/triple-1200.webp 1200w" sizes="(max-width: 900px) 100vw, 50vw" alt="Habitació triple amb paret de fusta i llits individuals" loading="lazy" width="1200" height="900">
+            <div class="card__body">
+              <h3>Habitació triple</h3>
+              <p class="card__meta">Tres llits individuals</p>
+              <ul class="features">
+                <li>Balcó amb vistes</li>
+                <li>Bany privat amb banyera</li>
+                <li>Calefacció</li>
+                <li>Televisió</li>
+              </ul>
+              <details>
+                <summary>Més informació</summary>
+                <p>Pensada per a famílies i grups petits que vénen a esquiar o a caminar per la muntanya.</p>
+              </details>
+              <div class="card__actions">
+                <a class="button" href="https://book.octorate.com/octobook/site/reservation/calendar.xhtml?codice=336370&amp;room=347176" target="_blank" rel="noopener">Reserva la triple</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="common">
+          <div class="common__text">
+            <h3>A totes les habitacions</h3>
+            <p>Els banys són iguals a totes les habitacions, i des de tots els balcons es veuen les muntanyes.</p>
+            <ul>
+              <li>Bany privat amb banyera i bidet</li>
+              <li>Tovalloles i articles de bany</li>
+              <li>Balcó amb taula i cadires</li>
+            </ul>
+          </div>
+          <figure>
+            <img src="assets/img/bany-900.webp" alt="Bany amb banyera, lavabo i bidet" loading="lazy" width="900" height="1125">
+            <figcaption>El bany</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/balco-vistes-700.webp" srcset="assets/img/balco-vistes-700.webp 700w, assets/img/balco-vistes-1000.webp 1000w" sizes="(max-width: 900px) 50vw, 30vw" alt="Vista des d'un balcó: la vall i el pic al fons" loading="lazy" width="700" height="875">
+            <figcaption>La vista des del balcó</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <section class="section section--alt" id="serveis" aria-labelledby="serveis-title">
+    <section class="section" id="serveis" aria-labelledby="serveis-title">
       <div class="container">
         <h2 id="serveis-title">Serveis</h2>
-        <!-- Llista de serveis reals de l'hotel -->
-        <ul class="grid" data-placeholder>
-          <li class="placeholder">Properament.</li>
+        <ul class="grid">
+          <li class="service">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20 9.5 8l3.5 6 2.5-4L21 20z"/><path d="M8 11.2 9.5 13 11 11.2"/></svg>
+            <h3>Balcó i vistes</h3>
+            <p>Totes les habitacions tenen balcó amb vistes a les muntanyes.</p>
+          </li>
+          <li class="service">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9.5 17V7h3.5a3 3 0 0 1 0 6H9.5"/></svg>
+            <h3>Aparcament gratuït</h3>
+            <p>Deixa el cotxe just davant de l'hotel, sense cost.</p>
+          </li>
+          <li class="service">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11h13v3a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M17 12h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8 4c-1 1.5 1 2.5 0 4M12 4c-1 1.5 1 2.5 0 4"/></svg>
+            <h3>Esmorzar complet</h3>
+            <p>Opcional, 10 € per persona. Veure més avall què inclou.</p>
+          </li>
+          <li class="service">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="10" r="1.8"/><circle cx="10" cy="6" r="1.8"/><circle cx="14" cy="6" r="1.8"/><circle cx="18" cy="10" r="1.8"/><path d="M8 17.5c0-3 2-5.5 4-5.5s4 2.5 4 5.5c0 1.6-1.4 2.5-4 2.5s-4-.9-4-2.5z"/></svg>
+            <h3>Mascotes benvingudes</h3>
+            <p>Segons disponibilitat i amb avís previ. El preu depèn de la mida de la mascota.</p>
+          </li>
+          <li class="service">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 7 11h3l-4 6h12l-4-6h3z"/><path d="M12 17v4"/></svg>
+            <h3>Jardí i terrassa</h3>
+            <p>Un jardí gran de gespa i una terrassa amb vistes a la vall.</p>
+          </li>
+          <li class="service">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="12" rx="2"/><path d="M4 10h16"/><circle cx="8" cy="19" r="1.5"/><circle cx="16" cy="19" r="1.5"/></svg>
+            <h3>A prop de les pistes</h3>
+            <p>Vallnord a 1 km, amb bus llançadora cada 30 minuts.</p>
+          </li>
         </ul>
+
+        <div class="breakfast">
+          <img src="assets/img/esmorzar-1200.webp" srcset="assets/img/esmorzar-700.webp 700w, assets/img/esmorzar-1200.webp 1200w" sizes="(max-width: 820px) 100vw, 50vw" alt="Menjador de l'esmorzar amb parets de fusta" loading="lazy" width="1200" height="675">
+          <div>
+            <h3>Esmorzar complet</h3>
+            <p class="breakfast__price">10 €</p>
+            <p>Suc de taronja, fruita, iogurt, llet, cafè, brioixeria, pa de motlle, pernil dolç, formatge, embotit, melmelades i mantega.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="galeria" aria-labelledby="galeria-title">
+    <section class="section section--alt" id="galeria" aria-labelledby="galeria-title">
       <div class="container">
         <h2 id="galeria-title">Galeria</h2>
-        <!-- Fotografies reals de l'hotel (assets/img/), amb text alternatiu -->
-        <div class="gallery" data-placeholder>
-          <p class="placeholder">Properament.</p>
+        <div class="gallery" data-gallery>
+          <button class="is-wide is-tall" type="button" data-full="assets/img/g-exterior-pic-1600.webp"><img src="assets/img/g-exterior-pic-600.webp" alt="L'hotel amb el pic nevat al fons" loading="lazy"></button>
+          <button class="is-tall" type="button" data-full="assets/img/g-balco-porta-1100.webp"><img src="assets/img/g-balco-porta-600.webp" alt="Porta de l'habitació oberta al balcó" loading="lazy"></button>
+          <button type="button" data-full="assets/img/g-mural-1600.webp"><img src="assets/img/g-mural-600.webp" alt="Mural de ferro forjat i vitralls al menjador" loading="lazy"></button>
+          <button type="button" data-full="assets/img/g-parking-1600.webp"><img src="assets/img/g-parking-600.webp" alt="Aparcament gratuït davant de l'hotel" loading="lazy"></button>
+          <button class="is-tall" type="button" data-full="assets/img/g-doble-balco-1100.webp"><img src="assets/img/g-doble-balco-600.webp" alt="Habitació doble amb sortida al balcó" loading="lazy"></button>
+          <button class="is-tall" type="button" data-full="assets/img/g-balco-vall-1100.webp"><img src="assets/img/g-balco-vall-600.webp" alt="Balcó amb taula i cadires i vistes a la vall" loading="lazy"></button>
+          <button type="button" data-full="assets/img/g-amenities-1100.webp"><img src="assets/img/g-amenities-600.webp" alt="Articles de bany" loading="lazy"></button>
+          <button class="is-tall" type="button" data-full="assets/img/g-triple-1100.webp"><img src="assets/img/g-triple-600.webp" alt="Habitació triple" loading="lazy"></button>
+          <button class="is-wide" type="button" data-full="assets/img/g-vall-1600.webp"><img src="assets/img/g-vall-600.webp" alt="L'hotel i la vall de La Massana a l'hivern" loading="lazy"></button>
         </div>
       </div>
     </section>
 
-    <section class="section section--alt" id="ubicacio" aria-labelledby="ubicacio-title">
+    <section class="section" id="ubicacio" aria-labelledby="ubicacio-title">
       <div class="container">
         <h2 id="ubicacio-title">Ubicació</h2>
-        <!-- Adreça, com arribar i mapa -->
-        <div class="map" data-placeholder>
-          <p class="placeholder">Properament.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="reserves" aria-labelledby="reserves-title">
-      <div class="container">
-        <h2 id="reserves-title">Reserves</h2>
-        <!-- Motor de reserves: inserir aquí el codi o l'enllaç del proveïdor -->
-        <div class="booking" id="motor-reserves" data-placeholder>
-          <p class="placeholder">Properament.</p>
+        <div class="location">
+          <div>
+            <p class="lead">Sispony, a la parròquia de La Massana. Un lloc tranquil, amb la vall i les muntanyes davant.</p>
+            <ul class="distances">
+              <li><span>Adreça</span><b>Av. del Jovell, 20 · AD400 Sispony</b></li>
+              <li><span>Pistes de Vallnord</span><b>1 km</b></li>
+              <li><span>Bus llançadora a les pistes</span><b>cada 30 min</b></li>
+            </ul>
+            <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+La+Burna+Panoramic+Sispony+Andorra" target="_blank" rel="noopener">Com arribar</a>
+          </div>
+          <div class="map">
+            <iframe src="https://www.google.com/maps?q=Hotel+La+Burna+Panor%C3%A0mic,+Av.+del+Jovell+20,+Sispony,+Andorra&amp;output=embed" title="Mapa: Hotel La Burna Panoràmic a Sispony" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
       </div>
     </section>
@@ -117,9 +298,11 @@
     <section class="section section--alt" id="contacte" aria-labelledby="contacte-title">
       <div class="container">
         <h2 id="contacte-title">Contacte</h2>
-        <!-- Telèfon, correu (Wepanel) i adreça reals -->
-        <address class="contact" data-placeholder>
-          <p class="placeholder">Properament.</p>
+        <address class="contact">
+          <div><small>Telèfon</small><a href="tel:+376835355">+376 835 355</a></div>
+          <div><small>Correu electrònic</small><a href="mailto:info@hotellaburna.com">info@hotellaburna.com</a></div>
+          <div><small>Instagram</small><a href="https://www.instagram.com/panoramiclaburna" target="_blank" rel="noopener">@panoramiclaburna</a></div>
+          <div><small>Adreça</small><span>Av. del Jovell, 20<br>AD400 Sispony, La Massana</span></div>
         </address>
       </div>
     </section>
@@ -128,8 +311,24 @@
   <footer class="footer">
     <div class="container footer__inner">
       <p>© <span data-year></span> Hotel La Burna Panoràmic</p>
-      <!-- Enllaços legals: avís legal, privacitat i galetes -->
+      <ul class="lang" aria-label="Idioma">
+        <li><a href="/" hreflang="ca" lang="ca" aria-current="page">CA</a></li>
+        <li><a href="/es/" hreflang="es" lang="es">ES</a></li>
+        <li><a href="/en/" hreflang="en" lang="en">EN</a></li>
+        <li><a href="/fr/" hreflang="fr" lang="fr">FR</a></li>
+      </ul>
+      <!-- Enllaços legals: avís legal, privacitat i galetes (quan existeixin les pàgines) -->
     </div>
   </footer>
+
+  <dialog class="lightbox" aria-label="Galeria de fotos">
+    <div class="lightbox__inner">
+      <img src="" alt="">
+      <p></p>
+      <button class="lightbox__btn lightbox__close" type="button" aria-label="Tanca">×</button>
+      <button class="lightbox__btn lightbox__prev" type="button" aria-label="Foto anterior">‹</button>
+      <button class="lightbox__btn lightbox__next" type="button" aria-label="Foto següent">›</button>
+    </div>
+  </dialog>
 </body>
 </html>
