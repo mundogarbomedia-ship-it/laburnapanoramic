@@ -1,0 +1,45 @@
+# Publica la web a Wepanel cada vez que hi ha canvis a la branca main.
+# Les credencials NO van aquí: es guarden com a «secrets» del repositori a GitHub
+# (Settings → Secrets and variables → Actions):
+#   FTP_SERVER      servidor FTP de Wepanel (p. ex. el que indica Wepanel a «Cuentas FTP»)
+#   FTP_USERNAME    usuari FTP
+#   FTP_PASSWORD    contrasenya FTP
+#   FTP_SERVER_DIR  carpeta de destí, acabada en «/» (p. ex. public_html/laburnahotel.com/
+#                   o «./» si l'usuari FTP ja entra directament a aquesta carpeta)
+#
+# Només puja i actualitza els fitxers del repositori. No esborra res del servidor
+# (la carpeta .well-known es manté intacta).
+
+name: Publicar a Wepanel
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: publicar-wepanel
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descarregar el codi
+        uses: actions/checkout@v4
+
+      - name: Pujar a Wepanel per FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          protocol: ftps
+          dangerous-clean-slate: false
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            README.md
+            **/.gitkeep

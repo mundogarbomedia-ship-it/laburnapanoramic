@@ -68,3 +68,12 @@ y abrir http://localhost:8000/
 - El mapa de Google solo se carga si el usuario pulsa «Mostra el mapa» (por las cookies).
 - No hay jardín ni terraza: cada habitación tiene su propio balcón.
 - ES/EN/FR no se traducen hasta tener la versión catalana definitiva.
+
+## Publicación automática en Wepanel
+
+Cada `git push` a `main` publica la web en Wepanel con GitHub Actions (`.github/workflows/publicar-wepanel.yml`), por FTP.
+
+- Las credenciales van como *secrets* del repositorio en GitHub (Settings → Secrets and variables → Actions): `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD` y `FTP_SERVER_DIR`. Nunca en el código.
+- Solo sube y actualiza archivos: no borra nada del servidor (la carpeta `.well-known` se queda como está).
+- Para ver si ha funcionado: pestaña **Actions** del repositorio en GitHub.
+- Si falla la conexión con `ftps`, cambiar `protocol: ftps` por `protocol: ftp` en el workflow.
