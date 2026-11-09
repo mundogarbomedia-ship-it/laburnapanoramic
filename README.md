@@ -65,7 +65,7 @@ y abrir http://localhost:8000/
 ## Notas de la portada (CA)
 
 - Reservas justo después del hero, como en Valle del Reposo: widget de Octorate en `#motor-reserves` y botones por habitación (`room=346972` doble, `room=347176` triple), con `lang=CA`.
-- El mapa de Google solo se carga si el usuario pulsa «Mostra el mapa» (por las cookies).
+- El mapa de Google se muestra directamente (iframe con `loading="lazy"`). Si se quisiera volver a pedir permiso antes de cargarlo, `js/main.js` ya tiene el código para un bloque `data-map-src` con botón `data-map-load`.
 - No hay jardín ni terraza: cada habitación tiene su propio balcón.
 - ES/EN/FR no se traducen hasta tener la versión catalana definitiva.
 
