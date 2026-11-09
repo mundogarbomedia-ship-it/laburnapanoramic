@@ -1,14 +1,15 @@
 # Publica la web a Wepanel cada vez que hi ha canvis a la branca main.
 # Les credencials NO van aquí: es guarden com a «secrets» del repositori a GitHub
 # (Settings → Secrets and variables → Actions):
-#   FTP_SERVER      servidor FTP de Wepanel (p. ex. el que indica Wepanel a «Cuentas FTP»)
+#   FTP_SERVER      servidor FTP de Wepanel: el nom que indiqui Wepanel a les dades de la compte FTP
+#                   (ha de coincidir amb el certificat del servidor; amb la IP pot fallar la connexió segura)
 #   FTP_USERNAME    usuari FTP
 #   FTP_PASSWORD    contrasenya FTP
 #   FTP_SERVER_DIR  carpeta de destí, acabada en «/» (p. ex. public_html/laburnahotel.com/
 #                   o «./» si l'usuari FTP ja entra directament a aquesta carpeta)
 #
 # Només puja i actualitza els fitxers del repositori. No esborra res del servidor
-# (la carpeta .well-known es manté intacta).
+# (la carpeta .well-known es manté intacta). ES/EN/FR no es publiquen fins que estiguin traduïdes.
 
 name: Publicar a Wepanel
 
@@ -43,3 +44,6 @@ jobs:
             .github/**
             README.md
             **/.gitkeep
+            es/**
+            en/**
+            fr/**
