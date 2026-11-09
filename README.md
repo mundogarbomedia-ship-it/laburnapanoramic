@@ -65,7 +65,9 @@ y abrir http://localhost:8000/
 
 ## Notas de la portada (CA)
 
-- Reservas justo después del hero, como en Valle del Reposo: widget de Octorate en `#motor-reserves` y botones por habitación (`room=346972` doble, `room=347176` triple), con `lang=CA`.
+- Reservas: el buscador de Octorate va **dentro del hero**, debajo del título, como en hotelaldosa.com (`#reserves` > `#motor-reserves`, con `data-lang="CA"`). Botones por habitación (`room=346972` doble, `room=347176` triple), con `lang=CA`.
+- El widget de Octorate inyecta CSS global con `!important` para todos los `<button>` e `<input>`. Al final de `css/styles.css` hay un bloque que protege los botones propios (menú móvil, galería y visor). Si se añade otro `<button>`, hay que incluirlo ahí.
+- Las páginas ES/EN/FR todavía tienen la banda de reservas antigua: al reactivarlas, regenerarlas a partir de la portada CA.
 - El mapa de Google se muestra directamente (iframe con `loading="lazy"`). Si se quisiera volver a pedir permiso antes de cargarlo, `js/main.js` ya tiene el código para un bloque `data-map-src` con botón `data-map-load`.
 - No hay jardín ni terraza: cada habitación tiene su propio balcón.
 - **En pausa (9/11):** el selector de idioma y los `hreflang` ES/EN/FR están ocultos en las páginas CA, y las páginas ES/EN/FR llevan `noindex`, hasta que la web en catalán sea definitiva. Para reactivarlas: descomentar los selectores, volver a poner los `hreflang` y quitar el `noindex`, revisando antes que las traducciones recojan los cambios de la versión CA.

@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Marcellus&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=3">
+  <link rel="stylesheet" href="css/styles.css?v=4">
   <link rel="preload" as="image" href="assets/img/hero-hivern-1920.webp" media="(min-width: 700px)">
   <script src="js/main.js?v=3" defer></script>
 
@@ -100,27 +100,15 @@
       <div class="container">
         <h1 class="hero__title" id="hero-title">Un balcó obert al Pirineu</h1>
         <p class="hero__text">Hotel familiar a Sispony, a la parròquia de La Massana. Totes les habitacions tenen balcó i vistes a la muntanya.</p>
-        <div class="hero__actions">
-          <a class="button button--light" href="#reserves">Consulta disponibilitat</a>
-          <a class="button button--ghost" href="#habitacions">Veure habitacions</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Reserves just després del hero, com a la web de Valle del Reposo -->
-    <section class="booking-band" id="reserves" aria-labelledby="reserves-title">
-      <div class="container">
-        <div class="booking-band__head">
-          <div>
-            <h2 id="reserves-title">Consulta dates i preus</h2>
-            <p>Tria les dates i reserva directament amb l'hotel.</p>
+        <!-- Cercador d'Octorate dins del hero, com a hotelaldosa.com -->
+        <div class="hero__booking" id="reserves">
+          <h2 class="visually-hidden">Consulta dates i preus</h2>
+          <div class="booking" id="motor-reserves">
+            <!-- Motor de reserves Octorate (propietat 336370) -->
+            <script type="text/javascript" src="https://resx.octorate.com/octobook/resources/widget/js/form.js" data-sitekey="octosite336370" data-lang="CA"></script>
           </div>
+          <p class="booking__fallback">No veus el cercador? <a href="https://book.octorate.com/octobook/site/reservation/calendar.xhtml?codice=336370&amp;lang=CA" target="_blank" rel="noopener">Obre el motor de reserves</a></p>
         </div>
-        <div class="booking" id="motor-reserves">
-          <!-- Motor de reserves Octorate (propietat 336370) -->
-          <script type="text/javascript" src="https://resx.octorate.com/octobook/resources/widget/js/form.js" data-sitekey="octosite336370"></script>
-        </div>
-        <p class="booking__fallback">No veus el cercador? <a href="https://book.octorate.com/octobook/site/reservation/calendar.xhtml?codice=336370&amp;lang=CA" target="_blank" rel="noopener">Obre el motor de reserves</a></p>
       </div>
     </section>
 

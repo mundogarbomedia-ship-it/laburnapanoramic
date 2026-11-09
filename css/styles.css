@@ -147,7 +147,14 @@ p { margin: 0 0 1em; max-width: 64ch; }
 }
 @keyframes pujar { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 
-/* ---------- reserves (just després del hero) ---------- */
+/* ---------- cercador de reserves dins del hero ---------- */
+.hero__booking { margin-top: 1.6rem; max-width: 780px; }
+.hero__booking .booking { padding: .5rem .75rem; min-height: 88px; box-shadow: 0 18px 44px rgba(10, 16, 20, .32); }
+.hero__booking .booking__fallback { margin-top: .6rem; font-size: .88rem; color: rgba(255, 255, 255, .88); text-shadow: 0 1px 6px rgba(0, 0, 0, .45); }
+.hero__booking .booking__fallback a { color: #fff; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* ---------- banda de reserves (versions ES/EN/FR, pendents d'actualitzar) ---------- */
 .booking-band { background: var(--avet); color: #e4ece7; padding-block: clamp(2.5rem, 5vw, 3.5rem); }
 .booking-band h2 { color: #fff; font-size: clamp(1.7rem, 3vw, 2.3rem); margin-bottom: .2em; }
 .booking-band p { color: #c9d6cf; margin: 0; }
@@ -303,3 +310,15 @@ p { margin: 0 0 1em; max-width: 64ch; }
 .map { display: grid; }
 .map__consent { place-self: center; text-align: center; padding: 2rem 1.5rem; }
 .map__consent p { margin: 1rem auto 0; font-size: .92rem; color: var(--text-suau); max-width: 36ch; }
+
+/* ---------- Protecció contra el CSS global del widget d'Octorate ----------
+   El widget injecta regles globals amb !important per a tots els <button> i <input>
+   (fons verd, padding 0 28px, min-height 46px…). Aquí es restauren els botons propis del web. */
+.header__toggle, .gallery button, .lightbox__btn {
+  min-height: 0 !important; padding: 0 !important; font-family: inherit !important; font-weight: inherit !important;
+}
+.header__toggle { width: 46px !important; height: 46px !important; flex: none !important; background: transparent !important; border: 1px solid var(--linia) !important; border-radius: var(--radi) !important; }
+.header__toggle:hover { background: var(--boira) !important; }
+.gallery button { background: var(--boira) !important; border: 0 !important; border-radius: var(--radi) !important; }
+.lightbox__btn { background: rgba(255,255,255,.12) !important; color: #fff !important; border: 0 !important; border-radius: 50% !important; }
+.lightbox__btn:hover { background: rgba(255,255,255,.25) !important; }
