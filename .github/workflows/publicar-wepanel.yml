@@ -9,7 +9,7 @@
 #                   o «./» si l'usuari FTP ja entra directament a aquesta carpeta)
 #
 # Només puja i actualitza els fitxers del repositori. No esborra res del servidor
-# (la carpeta .well-known es manté intacta). ES/EN/FR no es publiquen fins que estiguin traduïdes.
+# (la carpeta .well-known es manté intacta).
 
 name: Publicar a Wepanel
 
@@ -44,6 +44,3 @@ jobs:
             .github/**
             README.md
             **/.gitkeep
-            es/**
-            en/**
-            fr/**

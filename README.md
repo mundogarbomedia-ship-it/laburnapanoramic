@@ -33,7 +33,8 @@ Web estática (HTML, CSS y JavaScript, sin frameworks) de **laburnahotel.com**.
 
 ```text
 index.html        Portada en catalán
-avis-legal.html   Aviso legal, privacidad y cookies (solo CA por ahora)
+avis-legal.html   Aviso legal, privacidad y cookies (CA)
+es/aviso-legal.html, en/legal-notice.html, fr/mentions-legales.html   Aviso legal en ES/EN/FR
 favicon.ico, apple-touch-icon.png   Iconos (sacados del logo)
 es/index.html     Portada en español
 en/index.html     Portada en inglés
@@ -46,7 +47,7 @@ assets/video/     Vídeo del hero (720p ordenador, 540p móvil)
 
 ## Secciones preparadas
 
-Habitaciones, servicios, galería, ubicación, reservas y contacto. El motor de reservas irá en el bloque `#motor-reserves`, que tiene el mismo id en los cuatro idiomas. Todas las secciones muestran «Properament / Próximamente / Coming soon / Prochainement» hasta tener la información real del hotel: no se inventan tarifas, fotografías ni servicios.
+Habitaciones, servicios, galería, ubicación, reservas y contacto. El motor de reservas irá en el bloque `#motor-reserves`, que tiene el mismo id en los cuatro idiomas.
 
 ## Probar en local
 
@@ -67,7 +68,8 @@ y abrir http://localhost:8000/
 - Reservas justo después del hero, como en Valle del Reposo: widget de Octorate en `#motor-reserves` y botones por habitación (`room=346972` doble, `room=347176` triple), con `lang=CA`.
 - El mapa de Google se muestra directamente (iframe con `loading="lazy"`). Si se quisiera volver a pedir permiso antes de cargarlo, `js/main.js` ya tiene el código para un bloque `data-map-src` con botón `data-map-load`.
 - No hay jardín ni terraza: cada habitación tiene su propio balcón.
-- ES/EN/FR no se traducen hasta tener la versión catalana definitiva.
+- ES/EN/FR traducidas el 9/11 a partir de la portada CA, con `lang=ES/EN/FR` en Octorate y `hl=` en el mapa. Si se cambia un texto de la portada CA, hay que cambiarlo también en `es/`, `en/` y `fr/`.
+- Anclajes del aviso legal: CA `#avis-legal` `#privacitat` `#galetes`; ES `#aviso-legal` `#privacidad` `#cookies`; EN `#legal-notice` `#privacy` `#cookies`; FR `#mentions-legales` `#confidentialite` `#cookies`.
 
 ## Publicación automática en Wepanel
 
