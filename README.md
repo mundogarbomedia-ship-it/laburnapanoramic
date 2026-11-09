@@ -68,7 +68,7 @@ y abrir http://localhost:8000/
 - Reservas justo después del hero, como en Valle del Reposo: widget de Octorate en `#motor-reserves` y botones por habitación (`room=346972` doble, `room=347176` triple), con `lang=CA`.
 - El mapa de Google se muestra directamente (iframe con `loading="lazy"`). Si se quisiera volver a pedir permiso antes de cargarlo, `js/main.js` ya tiene el código para un bloque `data-map-src` con botón `data-map-load`.
 - No hay jardín ni terraza: cada habitación tiene su propio balcón.
-- ES/EN/FR traducidas el 9/11 a partir de la portada CA, con `lang=ES/EN/FR` en Octorate y `hl=` en el mapa. Si se cambia un texto de la portada CA, hay que cambiarlo también en `es/`, `en/` y `fr/`.
+- ES/EN/FR traducidas el 9/11 a partir de la portada CA, con `lang=ES/EN/FR` en los enlaces de Octorate, `data-lang="ES/EN/FR"` en el script del buscador y `hl=` en el mapa. El buscador de Octorate no tiene catalán: en la portada CA va sin `data-lang` y sale en el idioma del navegador. Si se cambia un texto de la portada CA, hay que cambiarlo también en `es/`, `en/` y `fr/`.
 - Anclajes del aviso legal: CA `#avis-legal` `#privacitat` `#galetes`; ES `#aviso-legal` `#privacidad` `#cookies`; EN `#legal-notice` `#privacy` `#cookies`; FR `#mentions-legales` `#confidentialite` `#cookies`.
 
 ## Publicación automática en Wepanel
