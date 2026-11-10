@@ -67,11 +67,9 @@ y abrir http://localhost:8000/
 
 - Reservas: el buscador de Octorate va **dentro del hero**, debajo del título, como en hotelaldosa.com (`#reserves` > `#motor-reserves`, con `data-lang="CA"`). Botones por habitación (`room=346972` doble, `room=347176` triple), con `lang=CA`.
 - El widget de Octorate inyecta CSS global con `!important` para todos los `<button>` e `<input>`. Al final de `css/styles.css` hay un bloque que protege los botones propios (menú móvil, galería y visor). Si se añade otro `<button>`, hay que incluirlo ahí.
-- Las páginas ES/EN/FR todavía tienen la banda de reservas antigua: al reactivarlas, regenerarlas a partir de la portada CA.
 - El mapa de Google se muestra directamente (iframe con `loading="lazy"`). Si se quisiera volver a pedir permiso antes de cargarlo, `js/main.js` ya tiene el código para un bloque `data-map-src` con botón `data-map-load`.
 - No hay jardín ni terraza: cada habitación tiene su propio balcón.
-- **En pausa (9/11):** el selector de idioma y los `hreflang` ES/EN/FR están ocultos en las páginas CA, y las páginas ES/EN/FR llevan `noindex`, hasta que la web en catalán sea definitiva. Para reactivarlas: descomentar los selectores, volver a poner los `hreflang` y quitar el `noindex`, revisando antes que las traducciones recojan los cambios de la versión CA.
-- ES/EN/FR traducidas el 9/11 a partir de la portada CA, con `lang=ES/EN/FR` en los enlaces de Octorate, `data-lang="ES/EN/FR"` en el script del buscador y `hl=` en el mapa. El buscador de Octorate no tiene catalán: en la portada CA va sin `data-lang` y sale en el idioma del navegador. Si se cambia un texto de la portada CA, hay que cambiarlo también en `es/`, `en/` y `fr/`.
+- ES/EN/FR publicadas el 10/11 (traducidas el 9/11 y regeneradas a partir de la portada CA definitiva), con `lang=ES/EN/FR` en los enlaces de Octorate, `data-lang="ES/EN/FR"` en el script del buscador (en la portada CA, `data-lang="CA"`) y `hl=` en el mapa. Si se cambia un texto de la portada CA, hay que cambiarlo también en `es/`, `en/` y `fr/`.
 - Anclajes del aviso legal: CA `#avis-legal` `#privacitat` `#galetes`; ES `#aviso-legal` `#privacidad` `#cookies`; EN `#legal-notice` `#privacy` `#cookies`; FR `#mentions-legales` `#confidentialite` `#cookies`.
 
 ## Publicación automática en Wepanel

@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hotel La Burna Panoràmic · Hotel familiar en Sispony, Andorra</title>
   <meta name="description" content="Hotel familiar en Sispony (La Massana, Andorra). Habitaciones dobles y triples, todas con balcón y vistas a la montaña. Aparcamiento gratuito y pistas de Vallnord a 1 km. Reserva directa.">
-  <!-- noindex fins que la web en català sigui definitiva i es revisin les traduccions -->
-  <meta name="robots" content="noindex">
   <link rel="canonical" href="https://laburnahotel.com/es/">
 
   <!-- Versions d'idioma -->
@@ -103,27 +101,15 @@
       <div class="container">
         <h1 class="hero__title" id="hero-title">Un balcón abierto al Pirineo</h1>
         <p class="hero__text">Hotel familiar en Sispony, en la parroquia de La Massana. Todas las habitaciones tienen balcón y vistas a la montaña.</p>
-        <div class="hero__actions">
-          <a class="button button--light" href="#reservas">Consultar disponibilidad</a>
-          <a class="button button--ghost" href="#habitaciones">Ver habitaciones</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Reserves just després del hero, com a la web de Valle del Reposo -->
-    <section class="booking-band" id="reservas" aria-labelledby="reservas-title">
-      <div class="container">
-        <div class="booking-band__head">
-          <div>
-            <h2 id="reservas-title">Consulta fechas y precios</h2>
-            <p>Elige las fechas y reserva directamente con el hotel.</p>
+        <!-- Cercador d'Octorate dins del hero, com a hotelaldosa.com -->
+        <div class="hero__booking" id="reservas">
+          <h2 class="visually-hidden">Consulta fechas y precios</h2>
+          <div class="booking" id="motor-reserves">
+            <!-- Motor de reserves Octorate (propietat 336370) -->
+            <script type="text/javascript" src="https://resx.octorate.com/octobook/resources/widget/js/form.js" data-sitekey="octosite336370" data-lang="ES"></script>
           </div>
+          <p class="booking__fallback">¿No ves el buscador? <a href="https://book.octorate.com/octobook/site/reservation/calendar.xhtml?codice=336370&amp;lang=ES" target="_blank" rel="noopener">Abre el motor de reservas</a></p>
         </div>
-        <div class="booking" id="motor-reserves">
-          <!-- Motor de reserves Octorate (propietat 336370) -->
-          <script type="text/javascript" src="https://resx.octorate.com/octobook/resources/widget/js/form.js" data-sitekey="octosite336370" data-lang="ES"></script>
-        </div>
-        <p class="booking__fallback">¿No ves el buscador? <a href="https://book.octorate.com/octobook/site/reservation/calendar.xhtml?codice=336370&amp;lang=ES" target="_blank" rel="noopener">Abre el motor de reservas</a></p>
       </div>
     </section>
 
@@ -240,9 +226,9 @@
         <h2 id="servicios-title">Servicios</h2>
         <ul class="grid">
           <li class="service">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20 9.5 8l3.5 6 2.5-4L21 20z"/><path d="M8 11.2 9.5 13 11 11.2"/></svg>
-            <h3>Balcón y vistas</h3>
-            <p>Todas las habitaciones tienen balcón con vistas a las montañas.</p>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="16" r="3.5"/><circle cx="18" cy="16" r="3.5"/><path d="M6 16l4-7h6l2 7M10 9 8.5 6H7M16 9l-1.5-3H17"/></svg>
+            <h3>Esquís y bicicletas</h3>
+            <p>Garaje privado para guardar los esquís y las bicicletas.</p>
           </li>
           <li class="service">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9.5 17V7h3.5a3 3 0 0 1 0 6H9.5"/></svg>
