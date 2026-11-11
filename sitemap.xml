@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://laburnahotel.com/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://laburnahotel.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://laburnahotel.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laburnahotel.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laburnahotel.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laburnahotel.com/"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://laburnahotel.com/es/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://laburnahotel.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://laburnahotel.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laburnahotel.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laburnahotel.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laburnahotel.com/"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://laburnahotel.com/en/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://laburnahotel.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://laburnahotel.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laburnahotel.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laburnahotel.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laburnahotel.com/"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://laburnahotel.com/fr/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://laburnahotel.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://laburnahotel.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laburnahotel.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laburnahotel.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laburnahotel.com/"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://laburnahotel.com/avis-legal.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://laburnahotel.com/avis-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://laburnahotel.com/es/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laburnahotel.com/en/legal-notice.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laburnahotel.com/fr/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laburnahotel.com/avis-legal.html"/>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://laburnahotel.com/es/aviso-legal.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://laburnahotel.com/avis-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://laburnahotel.com/es/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laburnahotel.com/en/legal-notice.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laburnahotel.com/fr/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laburnahotel.com/avis-legal.html"/>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://laburnahotel.com/en/legal-notice.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://laburnahotel.com/avis-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://laburnahotel.com/es/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laburnahotel.com/en/legal-notice.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laburnahotel.com/fr/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laburnahotel.com/avis-legal.html"/>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://laburnahotel.com/fr/mentions-legales.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://laburnahotel.com/avis-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://laburnahotel.com/es/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laburnahotel.com/en/legal-notice.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laburnahotel.com/fr/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laburnahotel.com/avis-legal.html"/>
+    <priority>0.3</priority>
+  </url>
+</urlset>

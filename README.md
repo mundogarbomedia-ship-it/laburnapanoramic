@@ -33,6 +33,7 @@ Web estática (HTML, CSS y JavaScript, sin frameworks) de **laburnahotel.com**.
 
 ```text
 index.html        Portada en catalán
+robots.txt, sitemap.xml   Para Google (sitemap con las 8 páginas y sus versiones de idioma)
 avis-legal.html   Aviso legal, privacidad y cookies (CA)
 es/aviso-legal.html, en/legal-notice.html, fr/mentions-legales.html   Aviso legal en ES/EN/FR
 favicon.ico, apple-touch-icon.png   Iconos (sacados del logo)
