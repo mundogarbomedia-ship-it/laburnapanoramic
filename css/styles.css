@@ -153,6 +153,17 @@ p { margin: 0 0 1em; max-width: 64ch; }
 .hero__booking .booking__fallback { margin-top: .6rem; font-size: .88rem; color: rgba(255, 255, 255, .88); text-shadow: 0 1px 6px rgba(0, 0, 0, .45); }
 .hero__booking .booking__fallback a { color: #fff; }
 .location__routes { display: flex; flex-wrap: wrap; gap: .75rem; }
+.location__bus { margin-top: 2.25rem; padding-top: 1.75rem; border-top: 1px solid var(--linia); }
+.location__bus h3 { margin-bottom: .5rem; }
+.location__bus > p { margin: 0 0 .9rem; }
+.link-list { list-style: none; margin: 1.1rem 0 0; padding: 0; display: grid; gap: .4rem; font-size: .95rem; }
+.link-list a { color: var(--blau); font-weight: 600; }
+.link-list a::after { content: " ↗"; font-weight: 400; }
+.location__bus ol { margin: 0; padding-left: 1.25rem; display: grid; gap: .55rem; }
+.location__bus li::marker { color: var(--blau); font-weight: 600; }
+.bus-line { display: inline-block; padding: .05rem .45rem; border-radius: 4px; background: var(--blau); color: #fff; font-size: .85em; font-weight: 600; letter-spacing: .02em; }
+.useful-links { margin-top: 2rem; padding-top: 1.75rem; border-top: 1px solid var(--linia); }
+.useful-links .link-list { margin-top: .5rem; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 
 /* ---------- banda de reserves (versions ES/EN/FR, pendents d'actualitzar) ---------- */
