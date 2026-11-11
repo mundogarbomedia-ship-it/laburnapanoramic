@@ -73,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (gallery && box && typeof box.showModal === 'function') {
     const items = [...gallery.querySelectorAll('button[data-full]')];
     const img = box.querySelector('img');
+
     const caption = box.querySelector('p');
     let current = 0;
     let opener = null;
@@ -90,6 +91,14 @@ document.addEventListener('DOMContentLoaded', () => {
       show(i);
       box.showModal();
     }));
+    // Mosaic: només es veuen les 3 primeres fotos; «Veure totes les fotos» obre el visor amb totes
+    const allBtn = document.querySelector('[data-gallery-all]');
+    items.forEach((b, i) => { b.hidden = i >= 3; });
+    if (allBtn) allBtn.addEventListener('click', () => {
+      opener = allBtn;
+      show(0);
+      box.showModal();
+    });
     box.querySelector('.lightbox__close').addEventListener('click', () => box.close());
     box.querySelector('.lightbox__prev').addEventListener('click', () => show(current - 1));
     box.querySelector('.lightbox__next').addEventListener('click', () => show(current + 1));
