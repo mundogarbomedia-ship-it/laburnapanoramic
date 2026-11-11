@@ -94,6 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mosaic: només es veuen les 3 primeres fotos; «Veure totes les fotos» obre el visor amb totes
     const allBtn = document.querySelector('[data-gallery-all]');
     items.forEach((b, i) => { b.hidden = i >= 3; });
+    // Si només hi ha les 3 fotos del mosaic, el botó no cal
+    if (allBtn && items.length <= 3) allBtn.parentElement.hidden = true;
     if (allBtn) allBtn.addEventListener('click', () => {
       opener = allBtn;
       show(0);
