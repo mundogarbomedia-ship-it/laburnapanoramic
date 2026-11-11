@@ -84,9 +84,12 @@ p { margin: 0 0 1em; max-width: 64ch; }
   border-bottom: 1px solid var(--linia);
 }
 .header__inner { display: flex; align-items: center; gap: 1.5rem; min-height: 72px; }
-.header__logo { display: flex; flex-direction: column; text-decoration: none; color: var(--pissarra); line-height: 1; }
+.header__logo { display: flex; align-items: center; gap: .7rem; text-decoration: none; color: var(--pissarra); line-height: 1; }
+.header__logo img { width: 60px; height: 60px; flex: none; }
+.header__logo-text { display: flex; flex-direction: column; }
 .header__logo strong { font: 400 1.6rem/1 var(--display); color: var(--blau); }
-.header__logo span { font-size: .78rem; letter-spacing: .08em; color: var(--text-suau); margin-top: .3rem; }
+.header__logo-text span { font-size: .78rem; letter-spacing: .08em; color: var(--text-suau); margin-top: .3rem; }
+@media (max-width: 520px) { .header__logo img { width: 46px; height: 46px; } .header__logo { gap: .5rem; } }
 .nav { margin-left: auto; display: flex; align-items: center; gap: 1.75rem; }
 .nav__list, .lang { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; }
 .nav__list { gap: 1.5rem; }
