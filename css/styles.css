@@ -80,7 +80,7 @@ p { margin: 0 0 1em; max-width: 64ch; }
 /* ---------- capçalera ---------- */
 .header {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(245, 247, 246, .97);
+  background: #f5f7f6;
   border-bottom: 1px solid var(--linia);
 }
 .header__inner { display: flex; align-items: center; gap: 1.5rem; min-height: 72px; }
