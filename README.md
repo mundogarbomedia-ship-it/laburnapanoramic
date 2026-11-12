@@ -2,7 +2,7 @@
 
 Web estática (HTML, CSS y JavaScript, sin frameworks) de **laburnahotel.com**.
 
-- Hosting previsto: Wepanel (también el correo).
+- Hosting: servidor Plesk (`9i-misdns.com`, IP `46.4.57.186`), raíz del sitio `httpdocs`. Migrado desde Wepanel el 12/11/2026.
 - Rama principal: `main`. GitHub es siempre la copia buena: `git pull` al empezar y `git push` al terminar.
 
 ## Idiomas
@@ -73,11 +73,11 @@ y abrir http://localhost:8000/
 - ES/EN/FR publicadas el 10/11 (traducidas el 9/11 y regeneradas a partir de la portada CA definitiva), con `lang=ES/EN/FR` en los enlaces de Octorate, `data-lang="ES/EN/FR"` en el script del buscador (en la portada CA, `data-lang="CA"`) y `hl=` en el mapa. Si se cambia un texto de la portada CA, hay que cambiarlo también en `es/`, `en/` y `fr/`.
 - Anclajes del aviso legal: CA `#avis-legal` `#privacitat` `#galetes`; ES `#aviso-legal` `#privacidad` `#cookies`; EN `#legal-notice` `#privacy` `#cookies`; FR `#mentions-legales` `#confidentialite` `#cookies`.
 
-## Publicación automática en Wepanel
+## Publicación automática en Plesk
 
-Cada `git push` a `main` publica la web en Wepanel con GitHub Actions (`.github/workflows/publicar-wepanel.yml`), por FTP.
+Cada `git push` a `main` publica la web en el servidor Plesk con GitHub Actions (`.github/workflows/publicar-web.yml`, «Publicar la web»), por FTPS. También se puede lanzar a mano: Actions → «Publicar la web» → Run workflow.
 
-- Las credenciales van como *secrets* del repositorio en GitHub (Settings → Secrets and variables → Actions): `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD` y `FTP_SERVER_DIR`. Nunca en el código.
+- Las credenciales van como *secrets* del repositorio en GitHub (Settings → Secrets and variables → Actions): `FTP_SERVER` (`9i-misdns.com`), `FTP_USERNAME`, `FTP_PASSWORD` y `FTP_SERVER_DIR` (`httpdocs/`). Nunca en el código.
 - Solo sube y actualiza archivos: no borra nada del servidor (la carpeta `.well-known` se queda como está).
 - Para ver si ha funcionado: pestaña **Actions** del repositorio en GitHub.
-- Si falla la conexión con `ftps`, cambiar `protocol: ftps` por `protocol: ftp` en el workflow.
+- Si falla la conexión segura, revisar que `FTP_SERVER` sea el nombre que cubre el certificado del servidor (no la IP). No desactivar el cifrado ni la comprobación del certificado.

@@ -1,17 +1,17 @@
-# Publica la web a Wepanel cada vez que hi ha canvis a la branca main.
+# Publica la web al servidor Plesk (laburnahotel.com) cada vegada que hi ha canvis a la branca main.
 # Les credencials NO van aquí: es guarden com a «secrets» del repositori a GitHub
 # (Settings → Secrets and variables → Actions):
-#   FTP_SERVER      servidor FTP de Wepanel: el nom que indiqui Wepanel a les dades de la compte FTP
-#                   (ha de coincidir amb el certificat del servidor; amb la IP pot fallar la connexió segura)
+#   FTP_SERVER      nom del servidor Plesk (9i-misdns.com), sense ftp:// ni port
+#                   (ha de coincidir amb el certificat del servidor; amb la IP falla la connexió segura)
 #   FTP_USERNAME    usuari FTP
 #   FTP_PASSWORD    contrasenya FTP
-#   FTP_SERVER_DIR  carpeta de destí, acabada en «/» (p. ex. public_html/laburnahotel.com/
-#                   o «./» si l'usuari FTP ja entra directament a aquesta carpeta)
+#   FTP_SERVER_DIR  carpeta de destí, acabada en «/»: httpdocs/ (arrel del lloc a Plesk)
+#                   o «./» si l'usuari FTP ja entra directament a httpdocs
 #
 # Només puja i actualitza els fitxers del repositori. No esborra res del servidor
 # (la carpeta .well-known es manté intacta).
 
-name: Publicar a Wepanel
+name: Publicar la web
 
 on:
   push:
@@ -19,7 +19,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: publicar-wepanel
+  group: publicar-web
   cancel-in-progress: false
 
 jobs:
@@ -29,7 +29,7 @@ jobs:
       - name: Descarregar el codi
         uses: actions/checkout@v4
 
-      - name: Pujar a Wepanel per FTP
+      - name: Pujar a Plesk per FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
